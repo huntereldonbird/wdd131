@@ -1,13 +1,8 @@
-const year = document.querySelector("currentyear");
+const lastModified = document.querySelector("#lastModified");
+const copyright = document.querySelector("#copyright");
 
 const today = new Date();
 
-year.innerHTML = 'Last Modified :'
+lastModified.innerHTML = `last modified: <span class="highlight">${document.lastModified}</span>`;
 
-
-year.innerHTML = `Short: <span class="highlight">${new Intl.DateTimeFormat(
-	"en-US",
-	{
-		dateStyle: "short"
-	}
-).format(today)}</span>`;
+copyright.innerHTML = `&copy <span class="highlight">${today.getFullYear()}</span> Hunter Bird`;
