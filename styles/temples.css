@@ -30,9 +30,11 @@ main{
 	text-align: center;
 	justify-content: center;
 }
-
-main figure{
-	border: 1px solid black;
+main h2{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 1000;
 }
 
 header,
