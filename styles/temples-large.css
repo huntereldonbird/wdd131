@@ -5,11 +5,15 @@
 		justify-content: space-between;
 	}
 
-	nav {
-		justify-content: flex-end;
+	.navigation {
 		flex-direction: row;
 	}
-	nav a {
+
+	.navigation a {
+		display: block;
 		flex: 1 1 100%;
+	}
+	#menu{
+		display: none;
 	}
 }
