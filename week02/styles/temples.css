@@ -24,7 +24,7 @@ main{
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2f 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 header,
@@ -65,6 +65,7 @@ footer{
     padding: 20px;
     position: absolute;
     min-width: 100%;
+    text-align: center;
 }
 
 /* Larger Views ******************************/
