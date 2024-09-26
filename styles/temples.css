@@ -20,11 +20,19 @@ header {
 
 main{
     max-width: 1000px;
-    background-color: red;
-    padding: 30px;
+    padding: 20px;
+	margin: 10px;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	text-align: center;
+	justify-content: center;
+}
+
+main figure{
+	border: 1px solid black;
 }
 
 header,
@@ -68,7 +76,6 @@ footer{
     text-align: center;
 }
 
-/* Larger Views ******************************/
 @media (min-width: 740px) {
 	header {
 		display: flex;
