@@ -21,7 +21,8 @@ header {
 main{
     max-width: 1000px;
     padding: 20px;
-	margin: 10px;
+	margin: 0 auto;
+	margin-top: 50px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,25 +35,20 @@ main h2{
 	position: fixed;
 	left: 0;
 	right: 0;
-	top: 1000;
-}
-
-header,
-main {
-	margin: 0 auto;
+	top: 7rem;
 }
 
 h1 {
 	font-size: 2rem;
 }
 
-nav {
+.navigation {
 	background-color: #36454f;
 	display: flex;
 	flex-direction: column;
 }
 
-nav a {
+.navigation a {
 	display: block;
 	color: #fff;
 	text-align: center;
@@ -60,14 +56,28 @@ nav a {
 	text-decoration: none;
 }
 
-nav a:hover {
+.navigation a:hover {
 	text-decoration: underline double;
 	color: #000;
     text-decoration: overline;
 }
 
-.active {
-	color: yellow;
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+.open a {
+	display: none;
 }
 
 footer{
@@ -85,11 +95,15 @@ footer{
 		justify-content: space-between;
 	}
 
-	nav {
-		justify-content: flex-end;
+	.navigation {
 		flex-direction: row;
 	}
-	nav a {
+
+	.navigation a {
+		display: block;
 		flex: 1 1 100%;
+	}
+	#menu{
+		display: none;
 	}
 }
