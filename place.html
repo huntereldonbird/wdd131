@@ -25,19 +25,22 @@
 
     <main>
 
-        <picture>
+        <picture class="heroimg">
 
-            <source srcset="images/hero-large" media="min-width: 1000px">
-            <source srcset="images/hero-mobile.webp" media="min-width: 550px">
-            <img src="images/hero-large.webp" alt="awdhuihauiwhud">
+            <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+            <img src="images/hero-mobile.webp" alt="awdhuihauiwhud" width="100%" media="(min-width: 740px)">
 
         </picture>
 
         <section class="data">
 
-            <h1>
-                Data
-            </h1>
+            <div class="titleCard">
+               <h1>
+                    Data
+                </h1> 
+            </div>
+
+            
 
             <p><strong>Area:</strong> 587,041 sq km</p>
             <p><strong>Population:</strong> 27,691,018 </p>
@@ -54,10 +57,16 @@
 
         <section class="weather">
 
-            <h1> Weather</h1>
+            <div class="titleCard">
 
-            <img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="weather icon">
+                <h1> Weather</h1>
 
+                <img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="weather icon">
+
+
+            </div>
+
+            
             <p><strong>Tempurature:</strong> 10 C</p>
             <p><strong>Conditions:</strong> Partly Cloudy</p>
             <p><strong>Wind:</strong> 5 km/h</p>
