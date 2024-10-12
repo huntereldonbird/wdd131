@@ -24,17 +24,12 @@ main{
 	margin: 0 auto;
 	margin-top: 50px;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-	grid-gap: 10px;
 	text-align: center;
 	justify-content: center;
 }
-main h2{
-	position: fixed;
-	left: 0;
-	right: 0;
+
+main h2 {
+	text-align: center;
 }
 
 
@@ -105,16 +100,24 @@ footer{
 		margin: 0 auto;
 		margin-top: 50px;
 
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
-		grid-gap: 10px;
 		text-align: center;
 		justify-content: center;
 	}
 
+	.Gallery{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 10px;
+	}
+
+	.Card{
+		background-color: rgba(0, 0, 0, 0.1);;
+		padding: 10px;
+	}
+
 	.navigation {
 		flex-direction: row;
+
 	}
 
 	.navigation a {

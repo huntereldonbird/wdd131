@@ -58,7 +58,7 @@ const temples = [
     { 
         templeName: "Dallas Texas Temple",
         location: "Dallas Texas Temple",
-        dedicated: "19 October 1984",
+        dedicated: "19 October, 1984",
         area: 9999999,
         imageUrl:
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/dallas-texas/2018/1200x1200/Dallas-Texas-Temple12.jpg"
@@ -66,15 +66,15 @@ const temples = [
     { 
         templeName: "Draper Utah Temple",
         location: "Draper Utah Temple",
-        dedicated: "20 March 2009",
+        dedicated: "20 March, 2009",
         area: 9999999,
         imageUrl:
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/draper-utah/1280x800/draper-temple-759310-wallpaper.jpg"
     },
     { 
         templeName: "Idaho Falls Idaho Temple",
-        location: "daho Falls Idaho Temple",
-        dedicated: "23 September 1945",
+        location: "Idaho Falls Idaho Temple",
+        dedicated: "23 September, 1945",
         area: 9999999,
         imageUrl:
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/idaho-falls-idaho/2019/1280x800/1-Idaho-Falls-Temple-2097425.jpg"
@@ -101,3 +101,44 @@ hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
 });
+
+createTempleCard();
+
+function createTempleCard(){
+
+    index = 0;
+
+    temples.forEach(temple => {
+
+        tmp = index % 3;
+
+
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedicated = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area}`;
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("height", "200px");
+        
+
+        card.setAttribute("class", "Card")
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        document.querySelector(".Gallery").appendChild(card);
+        index++;
+    });
+}
