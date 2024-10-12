@@ -102,13 +102,41 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-createTempleCard();
+createTempleCard(temples);
 
-function createTempleCard(){
+
+const nonutahlink = document.querySelector("#nonutah");
+nonutahlink.addEventListener("click", () => {
+
+    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+    
+});
+
+const newLink = document.querySelector("#newer");
+newLink.addEventListener("click", () =>{
+    createTempleCard(temples.filter(temple => parseInt(temple.dedicated.split(",").map(part => part.trim())) > 2000));
+});
+const largerLink = document.querySelector("#larger");
+largerLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+const smallerLink = document.querySelector("#smaller");
+smallerLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 90000));
+});
+const homeLink = document.querySelector("#home");
+homeLink.addEventListener("click", () => {
+    createTempleCard(temples);
+});
+
+
+function createTempleCard(filteredTemples){
+
+    document.querySelector(".Gallery").innerHTML = "";
 
     index = 0;
 
-    temples.forEach(temple => {
+    filteredTemples.forEach(temple => {
 
         tmp = index % 3;
 
