@@ -1,8 +1,10 @@
 :root{
     --Base: #191D32;
     --Base2: #A2ABAB; 
+    --Base3: #8D99AE;
     --Accent1: #DD7373;
-    --Accent2: ;
+    --Accent2: #FFD972;
+    --Accent3: #417B5A;
 
 }
 
@@ -27,6 +29,13 @@ header {
 	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 30px #333;
+}
+
+.NewsScroller{
+    margin: 0 auto;
+    background-color: var(--Accent3);
+    height: 20px;
+    width: 100%;
 }
 
 footer {
