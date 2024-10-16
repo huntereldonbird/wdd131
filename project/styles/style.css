@@ -1,0 +1,46 @@
+:root{
+    --Base: #191D32;
+    --Base2: #A2ABAB; 
+    --Accent1: #DD7373;
+    --Accent2: ;
+
+}
+
+
+
+nav {
+    text-decoration: none;
+    flex-direction: row;
+    color: white;
+}
+
+nav a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+	background-color: var(--Base);
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
+}
+
+footer {
+	background-color: var(--Base);
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
+}
+
+
+
+
+body {
+    background-color: var(--Base2);
+}
