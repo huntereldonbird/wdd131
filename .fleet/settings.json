@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "monokai.basic.theme"
+        },
+        {
+            "type": "add",
+            "pluginName": "com.github.catppuccin.fleet"
+        }
+    ]
+}
