@@ -26,8 +26,6 @@ const products = [
     }
   ];
 
-
-
 function generateProducts(productlist){
     index = 0;
 
@@ -47,3 +45,19 @@ function generateProducts(productlist){
 }
 
 generateProducts(products);
+
+
+if (!localStorage.getItem('reviewCount')) {
+    localStorage.setItem('reviewCount', 0);
+}
+
+
+let reviewCount = parseInt(localStorage.getItem('reviewCount'), 10);
+reviewCount++;
+localStorage.setItem('reviewCount', reviewCount);
+
+
+const reviewCountDisplay = document.getElementById('review-count');
+reviewCountDisplay.textContent = `You have submitted ${reviewCount} review(s).`;
+
+
