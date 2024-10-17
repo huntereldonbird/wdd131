@@ -1,0 +1,23 @@
+#formclass {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    margin: 0 auto;
+}
+
+footer{
+    background-color: cornflowerblue;
+    padding: 20px;
+    position: absolute;
+    min-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
