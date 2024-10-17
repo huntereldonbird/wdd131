@@ -66,9 +66,21 @@ footer {
     border-bottom-right-radius: 5px;
 }
 
+.articlebuttons {
+    text-decoration: none;
+    background-color: none;
+    background: none;
+    border: none;
+}
+
+.articlebuttons:hover{
+    color:var(--Accent1);
+    
+}
+
 
 
 
 body {
-    background-color: var(--Base2);
+    
 }
