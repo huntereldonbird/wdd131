@@ -35,8 +35,13 @@
 
 .articlecontainers{
     display: grid;
+    padding: 10px;
     grid-template-columns:  1fr 4fr 2fr 1fr;
     padding: 25px;
+}
+
+.ProjectContainers{
+    
 }
 
 .articleTitle {
